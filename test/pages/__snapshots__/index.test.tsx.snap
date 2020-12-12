@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  <h1
+    class="pages__Title-sc-1q7pvn8-0 iqxFUP"
+  >
+    HOME
+  </h1>
+  <p>
+    Counter: 1
+  </p>
+  <button>
+    Increase
+  </button>
+  <button>
+    Decrease
+  </button>
+</DocumentFragment>
+`;

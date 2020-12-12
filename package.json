@@ -1,0 +1,63 @@
+{
+  "name": "nextjs-web-app-starter",
+  "author": {
+    "name": "Kalle Laakso",
+    "email": "hello@kallelaakso.eu"
+  },
+  "license": "MIT",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "test": "jest",
+    "test-all": "yarn lint && yarn type-check && yarn test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.2",
+    "date-fns": "^2.16.1",
+    "next": "10.0.3",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^5.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^10.4.9",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.14.11",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "16.8.4",
+    "@types/styled-components": "5.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "contentful-import": "^7.9.27",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.5.4",
+    "jest-watch-typeahead": "^0.5.0",
+    "lint-staged": "^10.0.10",
+    "prettier": "^2.0.2",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2"
+  }
+}
